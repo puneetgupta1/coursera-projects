@@ -8,15 +8,19 @@
     function LunchCheckController ($scope) {
         $scope.menu = "";
         $scope.message = "Please enter data first"; 
+        $scope.myStyle = {color: 'red'};
         
         $scope.check = function () {
             var total = count($scope.menu);
 
             if (total == 0) {
+                $scope.myStyle = {color: 'red'};
                 $scope.message = "Please enter data first";
             } else if (total <= 3) {
+                $scope.myStyle = {color: 'green'};
                 $scope.message = "Enjoy!";
             } else {
+                $scope.myStyle = {color: 'green'};
                 $scope.message = "Too much!";
             }
         };
