@@ -1,0 +1,5 @@
+<h4>{{ title }}</h4>
+<li ng-repeat="item in items">
+    {{ item.menuItem }}
+    <button class="btn btn-primary" ng-click="onRemove({index: $index});">Don't want this one!</button>
+</li>
